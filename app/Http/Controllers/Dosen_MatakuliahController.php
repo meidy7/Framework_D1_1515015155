@@ -9,6 +9,11 @@ use App\Dosen_Matakuliah;
 
 class Dosen_MatakuliahController extends Controller
 {
+	public function awal()
+    {
+    	# code...
+    	return view('Dosen_Matakuliah.awal', ['data'=>Pengguna::all()]);
+    }
     public function tambah(){
     	return $this->simpan();
     }
