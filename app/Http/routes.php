@@ -34,7 +34,7 @@ Route::get('Ruangan/edit/{Ruangan}','RuanganController@edit');
 Route::post('Ruangan/edit/{Ruangan}','RuanganController@update');
 Route::get('Ruangan/hapus/{Ruangan}','RuanganController@hapus');
 
-Route::get('dosen','dosenController@awal');
+Route::get('dosen','DosenController@awal');
 Route::get('dosen/tambah','DosenController@tambah');
 Route::get('dosen/{dosen}','DosenController@lihat');
 Route::post('dosen/simpan','DosenController@simpan');
@@ -42,7 +42,7 @@ Route::get('dosen/edit/{dosen}','DosenController@edit');
 Route::post('dosen/edit/{dosen}','DosenController@update');
 Route::get('dosen/hapus/{dosen}','DosenController@hapus');
 
-Route::get('mahasiswa','mahasiswaController@awal');
+Route::get('mahasiswa','MahasiswaController@awal');
 Route::get('mahasiswa/tambah','MahasiswaController@tambah');
 Route::get('mahasiswa/{mahasiswa}','MahasiswaController@lihat');
 Route::post('mahasiswa/simpan','MahasiswaController@simpan');

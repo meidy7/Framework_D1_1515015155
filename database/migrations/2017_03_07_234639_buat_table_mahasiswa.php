@@ -15,10 +15,10 @@ class BuatTableMahasiswa extends Migration
         Schema::create('mahasiswa', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama',50);
-            $table->string('nim',10);
+            $table->string('nim',18);
             $table->text('alamat');
-            $table->integer('pengguna_id',false,true);
-            $table->foreign('pengguna_id')->references('id')->on('pengguna')->onDelete('cascade');
+            $table->integer('pengguna_id')->unsigned();
+            $table->foreign('pengguna_id')->references('id')->on('pengguna');
             $table->timestamps();
         });
     }

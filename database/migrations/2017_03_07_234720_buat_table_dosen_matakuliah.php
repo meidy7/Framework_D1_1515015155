@@ -12,7 +12,7 @@ class BuatTableDosenMatakuliah extends Migration
      */
     public function up()
     {
-       Schema::create('dosen_matakuliah', function (Blueprint $table) {
+        Schema::create('dosen_matakuliah', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('dosen_id')->unsigned();
             $table->foreign('dosen_id')->references('id')->on('dosen');

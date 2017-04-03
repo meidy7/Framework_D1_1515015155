@@ -4,8 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Mahasiswa extends Model
+class mahasiswa extends Model
 {
     //
-     protected $table = 'mahasiswa';
+   protected $table = 'mahasiswa'; 
+	protected $fillable=['nama','nim'];
+    public function mahasiswa()
+   {
+   	return $this->hasOne(mahasiswa::class);
+   }
 }
