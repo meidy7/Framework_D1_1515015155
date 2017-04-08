@@ -1,12 +1,14 @@
 <div class="form-group">
-	<label class="col-sm-2 control-label">Title</label>
+	<label class="col-sm-2 control-label" id="dosen_id">Dosen</label>
 	<div class="col-sm-10">
-		{!! Form::text('title',null,['class'=>'form-control','placeholder'=>"Title"]) !!}
-	</div>	
+		{!! Form::select('dosen_id',$dosen->listDosenDanNip(),null,['class'=>'form-control','id'=>'dosen_id','placeholder'=>"Dosen"]) !!}	
+	</div>
 </div>
+
 <div class="form-group">
-	<label class="col-sm-2 control-label">Keterangan</label>
+	<label class="col-sm-2 control-label" id="matakuliah_id">Matakuliah</label>
 	<div class="col-sm-10">
-		{!! Form::text('keterangan',null,['class'=>'form-control','placeholder'=>"keterangan"]) !!}
-	</div>	
+		{!! Form::select('matakuliah_id',$matakuliah->listmatakuliah(),null,['class'=>'form-control','id'=>'matakuliah_id','placeholder'=>"Matakuliah"]) !!}	
+	</div>
 </div>
+

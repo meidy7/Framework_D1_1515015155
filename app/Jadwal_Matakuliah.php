@@ -8,20 +8,23 @@ class Jadwal_Matakuliah extends Model
 {
     //
     protected $table = 'Jadwal_Matakuliah';
-
+    protected $guarded = ['id'];
+    protected $fillable = ['mahasiswa_id','ruangan_id','dosen_matakuliah_id'];
     public function ruangan()
     {
     	# code...
-    	return $this->belongsToMany(ruangan::class);
+    	return $this->belongsTo(ruangan::class);
     }
     public function mahasiswa()
     {
     	# code...
-    	return $this->belongsToMany(mahasiswa::class);
+    	return $this->belongsTo(mahasiswa::class);
     }
     public function dosen_matakuliah()
     {
     	# code...
-    	return $this->belongsToMany(dosen_matakuliah::class);
+    	return $this->belongsTo(dosen_matakuliah::class);
     }
+    
 }
+

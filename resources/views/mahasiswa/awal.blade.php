@@ -13,17 +13,17 @@
 									<th>No.</th>
 									<th>Nama</th>
 									<th>NIM</th>
-									<th>Alamat</th>
+									<th>Aksi</th>
 							</tr>
 						</thead>
 						<tbody>
 								<?php $x=1?>
-								@foreach ($data as $mahasiswa)
+								@foreach ($semuaMahasiswa as $mahasiswa)
 									<tr>
 									<td>{{ $mahasiswa->id }}</td>
 									<td>{{ $mahasiswa->nama or 'Nama kosong'}}</td>
-									<td>{{ $mahasiswa->nim or 'NIP kosong'}}</td>
-									<td>{{ $mahasiswa->alamat or 'Alamat kosong'}}</td>
+									<td>{{ $mahasiswa->nim or 'NIM kosong'}}</td>
+									
 									<td>
 										<div class="btn-group" role-"group">
 											<a href="{{url('mahasiswa/edit/'.$mahasiswa->id)}}" class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="top" title="Ubah">

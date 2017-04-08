@@ -7,17 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Pengguna extends Model
 {
     protected $table = 'pengguna';
-    protected $fillable = ['username','password'];
+    protected $guarded = ['id'];
     public function Dosen()
     {
     	return $this->hasOne(Dosen::class);
     }
-    public function Mahasiswa()
+    public function mahasiswa()
     {
     	return $this->hasOne(mahasiswa::class);
     }
-    public function Peran()
+    public function peran()
     {
-    	return $this->belongToMany(mahasiswa::class);
+        return $this->belongsToMany(peran::class);
     }
 }

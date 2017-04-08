@@ -18,7 +18,7 @@ class BuatTableMahasiswa extends Migration
             $table->string('nim',18);
             $table->text('alamat');
             $table->integer('pengguna_id')->unsigned();
-            $table->foreign('pengguna_id')->references('id')->on('pengguna');
+            $table->foreign('pengguna_id')->references('id')->on('pengguna')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

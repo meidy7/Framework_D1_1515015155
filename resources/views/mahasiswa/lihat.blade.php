@@ -21,9 +21,14 @@
 						<td>{{ $mahasiswa->alamat }}</td>
 				</tr>
 				<tr>
-						<td>Pengguna_id</td>
+						<td>Username</td>
 						<td>:</td>
-						<td>{{ $mahasiswa->pengguna_id }}</td>
+						<td>{{ $mahasiswa->Pengguna->username}}</td>
+				</tr>
+				<tr>
+						<td>password</td>
+						<td>:</td>
+						<td>{{ $mahasiswa->Pengguna->password}}</td>
 				</tr>
 				<tr>
 						<td class="col-xs-4">Dibuat tanggal</td>

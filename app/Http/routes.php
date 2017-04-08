@@ -56,7 +56,7 @@ Route::get('Dosen_Matakuliah/{Dosen_Matakuliah}','Dosen_MatakuliahController@lih
 Route::post('Dosen_Matakuliah/simpan','Dosen_MatakuliahController@simpan');
 Route::get('Dosen_Matakuliah/edit/{Dosen_Matakuliah}','Dosen_MatakuliahController@edit');
 Route::post('Dosen_Matakuliah/edit/{Dosen_Matakuliah}','Dosen_MatakuliahController@update');
-Route::get('Dosen_Matakuliah/hapus{Dosen_Matakuliah}','Dosen_MatakuliahController@hapus');
+Route::get('Dosen_Matakuliah/hapus/{Dosen_Matakuliah}','Dosen_MatakuliahController@hapus');
 
 Route::get('Jadwal_Matakuliah','Jadwal_MatakuliahController@awal');
 Route::get('Jadwal_Matakuliah/tambah','Jadwal_MatakuliahController@tambah');

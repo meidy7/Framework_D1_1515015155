@@ -4,7 +4,7 @@
 	<div class="panel-heading">
 		<strong><a href="{{ url('mahasiswa') }}">
 <i class="fa text-default fa-chevron-left"></i>
-</a> Perbarui Data mahasiswa</strong>
+</a> Perbarui Data pengguna</strong>
 	</div>
 	{!! Form::model($mahasiswa,['url'=>'mahasiswa/edit/'.$mahasiswa->id,'class'=>'form-horizontal']) !!}
 		@include('mahasiswa.form')
