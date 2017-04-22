@@ -19,7 +19,11 @@ class PenggunaController extends Controller
     	return view('pengguna.tambah');
     }
     public function simpan(Request $input){
-    	$pengguna = new Pengguna;
+        $this->validate($input,[
+            'username'=>'required',
+        'password'=>'required',
+        ]);
+        $pengguna = new Pengguna;
     	$pengguna->username = $input->username;
     	$pengguna->password = $input->password;
     	$informasi = $pengguna->save()?'Berhasil simpan data': 'Gagal simpan data';

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>@yield('page_title','Halaman Awal') | Laboratorium Pemrograman FW</title>
+    <title>
+    @yield('page_title','Halaman Awal') | Laboratorium Pemrograman FW</title>
     <link rel="stylesheet" type="text/css" href="{{asset('component/bootstrap/dist/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('component/font-awesome/css/font-awesome.min.css')}}">
     <style type="text/css">
@@ -71,6 +72,13 @@
                                                     <strong>Informasi :</strong>
                 {{Session::get('informasi')}}
                                     </div>
+                            @endif
+                            @if(count($errors)>0)
+                            <div class="alert alert-danger"><ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{$error}}</li>
+                                @endforeach
+                            </ul></div>
                             @endif
                             @yield('container')
                     </div>
